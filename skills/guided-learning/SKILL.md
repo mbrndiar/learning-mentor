@@ -37,7 +37,10 @@ Read and follow:
 7. Run `status`, `due-reviews`, and `next-objective` in that order. Prefer a due
    review; otherwise resume or start the prerequisite-valid objective.
 8. Explain what local state is stored, where it is stored, and its privacy
-   limits. Ask about the learner's goal, prior experience, and available time.
+   limits. Derive the effective path from `--db`,
+   `COPILOT_LEARNING_TUTOR_DB`, or the documented XDG default; never invent a
+   repository-local database. Ask about the learner's goal, prior experience,
+   and available time.
 
 Follow the state model's fail-closed rules for validation, projection,
 initialization, and changed commits. Never edit the SQLite database directly.

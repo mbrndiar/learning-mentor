@@ -70,6 +70,11 @@ changes before reading or recording state for the new commit. If any boundary
 fails, claim no state change or current objective, label state unavailable, and
 continue read-only only when useful.
 
+When explaining state privacy or location, derive the effective database path
+from an explicit `--db`, `COPILOT_LEARNING_TUTOR_DB`, or the state helper's
+documented XDG default. Never describe state as repository-local unless the
+declared state command explicitly selects a repository-relative database.
+
 ## Evidence and progression
 
 - Inspect repository sources before making a repository-specific claim and cite
