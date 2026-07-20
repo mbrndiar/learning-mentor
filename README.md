@@ -4,14 +4,18 @@ Shared agent and guided-learning policy for hands-on `learning-*` repositories.
 
 ## Status
 
-This repository is in the extraction phase. The state engine is covered by its
-existing unit tests, but course integration has not yet passed the planned
-GitHub Copilot CLI, OpenAI Codex, and Claude Code pilot.
+The local extraction is complete, but the repository is not yet published and no
+real course has migrated. An isolated demo-course fixture pinned commit
+`d2e1f4f` and completed the required startup sequence in GitHub Copilot CLI,
+OpenAI Codex, and Claude Code; all three selected `concept.demo.hello`. This
+validates the proposed discovery links, native agent entrypoints, descriptor,
+adapter handshake, and shared state startup, not the full tutoring matrix.
 
-Codex custom-agent TOML currently describes a subagent. The pilot must prove
-that switching into and steering that agent thread provides a satisfactory
-long-running mentoring conversation; otherwise Codex will need a thin
-main-thread launcher that still reads the same canonical agent and skill.
+Codex currently enters mentoring through a subagent. The isolated startup
+succeeded after two transient spawn retries, but a sustained multi-turn
+conversation still needs the real course pilot. If that interaction is
+unsatisfactory, Codex will need a thin main-thread launcher that still reads the
+same canonical agent and skill.
 
 ## Components
 
