@@ -4,12 +4,12 @@ Shared agent and guided-learning policy for hands-on `learning-*` repositories.
 
 ## Status
 
-The local extraction is complete, but the repository is not yet published and no
-real course has migrated. An isolated demo-course fixture pinned commit
-`d2e1f4f` and completed the required startup sequence in GitHub Copilot CLI,
-OpenAI Codex, and Claude Code; all three selected `concept.demo.hello`. This
-validates the proposed discovery links, native agent entrypoints, descriptor,
-adapter handshake, and shared state startup, not the full tutoring matrix.
+The shared repository is published. An isolated demo-course fixture pinned
+commit `d2e1f4f` and completed the required startup sequence in GitHub Copilot
+CLI, OpenAI Codex, and Claude Code; all three selected `concept.demo.hello`.
+The first `learning-python` migration has also passed local adapter, state,
+distribution, link, and skill-discovery checks. This validates the selected
+layout and startup boundaries, not the full tutoring matrix.
 
 Codex currently enters mentoring through a subagent. The isolated startup
 succeeded after two transient spawn retries, but a sustained multi-turn
