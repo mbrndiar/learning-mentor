@@ -59,26 +59,10 @@ class DistributionTests(unittest.TestCase):
             SKILL,
             AGENT,
             CODEX,
-            ROOT
-            / "skills"
-            / "guided-learning"
-            / "references"
-            / "adapter-protocol.md",
-            ROOT
-            / "skills"
-            / "guided-learning"
-            / "references"
-            / "socratic-policy.md",
-            ROOT
-            / "skills"
-            / "guided-learning"
-            / "references"
-            / "state-model.md",
-            ROOT
-            / "skills"
-            / "guided-learning"
-            / "scripts"
-            / "learning_state.py",
+            ROOT / "skills" / "guided-learning" / "references" / "adapter-protocol.md",
+            ROOT / "skills" / "guided-learning" / "references" / "socratic-policy.md",
+            ROOT / "skills" / "guided-learning" / "references" / "state-model.md",
+            ROOT / "skills" / "guided-learning" / "scripts" / "learning_state.py",
         )
         self.assertEqual([path for path in expected if not path.is_file()], [])
 
