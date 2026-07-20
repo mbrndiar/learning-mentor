@@ -63,7 +63,9 @@ Before selecting any learning objective:
    exit zero. Verify the initialized concept total matches the projection.
 5. Only after successful initialization, run `status`, then `due-reviews`, then
    `next-objective` with the same state command, identity, commit, and optional
-   database argument. Prefer a due review over a new objective.
+   database argument. When `due-reviews` is non-empty, the first returned review
+   is the preferred learning item; `next-objective` is informational and must
+   not be labeled preferred until no review is due.
 
 Repeat adapter validation, projection, and `init-course` whenever `HEAD`
 changes before reading or recording state for the new commit. If any boundary
@@ -72,7 +74,10 @@ continue read-only only when useful.
 
 When explaining state privacy or location, derive the effective database path
 from an explicit `--db`, `COPILOT_LEARNING_TUTOR_DB`, or the state helper's
-documented XDG default. Never describe state as repository-local unless the
+documented XDG default:
+`$XDG_DATA_HOME/copilot-learning-tutor/state.sqlite3`, falling back to
+`~/.local/share/copilot-learning-tutor/state.sqlite3`. Never report only the
+parent directory, and never describe state as repository-local unless the
 declared state command explicitly selects a repository-relative database.
 
 ## Evidence and progression

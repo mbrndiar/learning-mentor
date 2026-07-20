@@ -36,7 +36,9 @@ class DistributionTests(unittest.TestCase):
             text,
         )
         self.assertRegex(text, r"invalid course\s+integration")
-        self.assertIn("Never describe state as repository-local", text)
+        self.assertRegex(text, r"must\s+not be labeled preferred")
+        self.assertIn("never describe state as repository-local", text)
+        self.assertIn("copilot-learning-tutor/state.sqlite3", text)
         self.assertNotIn("learning-python-adapter", text)
         self.assertNotIn(".github/skills/learning-tutor-core", text)
 
